@@ -6,7 +6,7 @@ const helpText = [
   { name: '!jojo', value: "it's me, DIO!!!" },
   { name: '!help', value: 'Lista de comandos' },
   { name: '!bia', value: ':snake:' },
-  { name: '!run [personagem]', value: 'Naruto, Nezuko' },
+  { name: '!run [personagem]', value: 'Naruto, Nezuko, Mahito' },
   { name: '!github', value: 'Repositório oficial do Mamaco BOT' },
 ]
 
