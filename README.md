@@ -14,7 +14,6 @@ it's me, DIO!!!
 Lista de comandos
 - !bia: 
 :snake:
-- !runnezuko
-Corre Nezuko!!!
+- !run <personagem>: Naruto, Nezuko
 - !github: 
 Repositório oficial do Mamaco BOT
