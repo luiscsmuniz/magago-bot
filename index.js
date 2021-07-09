@@ -35,6 +35,18 @@ client.on("message", function(message) {
     );
   }
 
+  if (command === "bia") {
+    message.channel.send(
+      ":snake:",
+    );
+  }
+
+  if (command === "runnezuko") {
+    message.channel.send('', {
+      files: ['https://i.imgur.com/EuD6kHK.gif']
+    })
+  }
+
   if (command === "help") {
     const helpEmbed = new Discord.MessageEmbed()
       .setColor('#0099ff')
