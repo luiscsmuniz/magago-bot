@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const keepAlive = require("./server");
 require('dotenv/config');
 
 const client = new Discord.Client();
@@ -52,5 +53,7 @@ client.on("message", function(message) {
     message.channel.send(helpEmbed)
   }
 });
+
+keepAlive()
 
 client.login(process.env.TOKEN);
