@@ -14,7 +14,42 @@ client.on("message", function(message) {
   const command = args.shift().toLowerCase();
 
   if (command === "mamaco") {
-    message.reply("Eu vi ver o MAMACO! :monkey_face");
+    message.channel.send(
+      "",
+      {files: ["https://i.imgur.com/1lwclvz.jpeg"]},
+    );
+  }
+
+  if (command === "mamada") {
+    message.reply(
+      `deu uma sugada no(a) ${message.guild.members.cache.random()}`,
+      {files: ["https://i.imgur.com/PCsLfPs.gif"]}
+    );
+  }
+
+  if (command === "jojo") {
+    message.channel.send(
+      "",
+      {files: ["./images/jojo.png"]}
+    );
+  }
+
+  if (command === "help") {
+    const helpEmbed = new Discord.MessageEmbed()
+      .setColor('#0099ff')
+      .setTitle('Lista de comandos')
+      .setURL('')
+      .setAuthor('Mamaco BOT', 'https://i.imgur.com/I7LOxp5.jpg')
+      .addFields(
+        { name: '!mamaco', value: 'Eu vim ver o MACACO!' },
+        { name: '!mamada', value: 'Mame seus amiguinhos' },
+        { name: '!jojo', value: "it's me, DIO!!!" },
+        { name: '!help', value: 'Lista de comandos' },
+      )
+      .setTimestamp()
+      .setFooter('Mamaco BOT', 'https://i.imgur.com/I7LOxp5.jpg');
+
+    message.channel.send(helpEmbed)
   }
 });
 
