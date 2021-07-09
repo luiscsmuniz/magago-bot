@@ -1,5 +1,12 @@
 const Discord = require("discord.js");
 const keepAlive = require("./server");
+const help = require("./commands/help");
+const bia = require("./commands/bia");
+const mamaco = require("./commands/mamaco");
+const mamada = require("./commands/mamada");
+const runnezuko = require("./commands/runnezuko");
+const jojo = require("./commands/jojo");
+const github = require("./commands/github");
 require('dotenv/config');
 
 const client = new Discord.Client();
@@ -15,54 +22,31 @@ client.on("message", function(message) {
   const command = args.shift().toLowerCase();
 
   if (command === "mamaco") {
-    message.channel.send(
-      "",
-      {files: ["https://i.imgur.com/1lwclvz.jpeg"]},
-    );
+    mamaco(message)
   }
 
   if (command === "mamada") {
-    message.reply(
-      `deu uma sugada no(a) ${message.guild.members.cache.random()}`,
-      {files: ["https://i.imgur.com/PCsLfPs.gif"]}
-    );
+    mamada(message)
   }
 
   if (command === "jojo") {
-    message.channel.send(
-      "",
-      {files: ["./images/jojo.png"]}
-    );
+    jojo(message)
   }
 
   if (command === "bia") {
-    message.channel.send(
-      ":snake:",
-    );
+    bia(message)
   }
 
   if (command === "runnezuko") {
-    message.channel.send('', {
-      files: ['https://i.imgur.com/EuD6kHK.gif']
-    })
+    runnezuko(message)
   }
 
   if (command === "help") {
-    const helpEmbed = new Discord.MessageEmbed()
-      .setColor('#0099ff')
-      .setTitle('Lista de comandos')
-      .setURL('')
-      .setAuthor('Mamaco BOT', 'https://i.imgur.com/I7LOxp5.jpg')
-      .addFields(
-        { name: '!mamaco', value: 'Eu vim ver o MACACO!' },
-        { name: '!mamada', value: 'Mame seus amiguinhos' },
-        { name: '!jojo', value: "it's me, DIO!!!" },
-        { name: '!help', value: 'Lista de comandos' },
-      )
-      .setTimestamp()
-      .setFooter('Mamaco BOT', 'https://i.imgur.com/I7LOxp5.jpg');
+    help(message)
+  }
 
-    message.channel.send(helpEmbed)
+  if (command === "github") {
+    github(message)
   }
 });
 
