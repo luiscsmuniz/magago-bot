@@ -4,7 +4,7 @@ const help = require("./commands/help");
 const bia = require("./commands/bia");
 const mamaco = require("./commands/mamaco");
 const mamada = require("./commands/mamada");
-const runnezuko = require("./commands/runnezuko");
+const run = require("./commands/run");
 const jojo = require("./commands/jojo");
 const github = require("./commands/github");
 require('dotenv/config');
@@ -37,8 +37,8 @@ client.on("message", function(message) {
     bia(message)
   }
 
-  if (command === "runnezuko") {
-    runnezuko(message)
+  if (command === "run") {
+    run(message, args)
   }
 
   if (command === "help") {
